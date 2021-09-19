@@ -13,6 +13,7 @@ _autosave-*
 *-save.pro
 *-save.kicad_pcb
 
+
 # Netlist files (exported from Eeschema)
 *.net
 
@@ -23,3 +24,4 @@ _autosave-*
 # Exported BOM files
 *.xml
 *.csv
+Drucksensor-backups/*
