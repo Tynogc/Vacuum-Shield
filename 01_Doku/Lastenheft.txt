@@ -3,28 +3,40 @@ Anforderungen für die Version 2 des Vakuumauslesers
 Edwardspumpensteuerung weg
 Edwards RJ45 Eingang sauber implementieren
 
-Kommunikation RS485, Protokoll Modbus RTU (gibts fertig)
-Adresseinstellung mit Mäuseklaviren
-MAX485 als Kommunikator nach draußen. 
+Kommunikation RS485, Protokoll Modbus RTU (gibts fertig, Spezifikation offen)
+Adresseinstellung mit 8 Bit Mäuseklaviren
+MAX485 als Kommunikator nach draußen. -> 2x RJ45 Buchsen mit RS485, 5V, 24V, GND, 2x Reserve
+-> Steckerbelegung: 
+1. Reserve 1
+2. Reserve 2
+3. 5V
+4. B
+5. A
+6. GND
+7. 24V
+8. GND
+
+Spannungen müssen über Lötbrücke zugeschaltet werden, normal aus, dennoch sind so kleine Bus powered Geräte (Gateway, Isolatoren) möglich!
+Mit einem ISDN-Kabel lassen sich BUS und 5V übertragen, daher werden dazu die inneren vier Kontakte genutzt. 
+
+
 David hat Netzteile mit 230V nach 24V und 5V
 
 Anzeigen: drei Stellen Wert, zwei Stellen Exponent, vier Quader-LEDs für +/-
 74HC595 je Display, Reihenwiderstände 1206
-Dimming: OE-Pin der Schieberegister an OC2 legen.
+Dimming: OE-Pin der Schieberegister an OC2 legen. ### Kollision mit SPI-Port MOSI -> OC1A evtl. auch mnöglich??
 
-Taster. 
+2x Taster (Input ändern / Umschalten Druckanzeige abs / rel)
+
 
 
 Featuritis:
 
-PlusMinus vor die Hauptanzeige (Relativdruckanzeige!)
--> Braucht einen Drucksensor für den Anzeiger (Kosten?)
-
 DS18B20 Anschluss
+Fernbedienbarkeit komplett, Nutzung als Anzeige, Wetterstation xyz.
 
 
-
-IO-Nutzungstabelle
+IO-Nutzungstabelle:
 
 ADCs: 
 2x Messung
@@ -35,13 +47,19 @@ GPIOs:
 4x für zwei Messröhren (Mag EN, Pirani Messbereichsumschaltung)
 2x Relais für Alarm (Out1), Wechsler, Photomos für Out2, LED je Out
 1x zwei LEDs Druckvariante Abs/Rel
-Eingänge: Taster. 
+
+Eingänge: 2x Taster an INT0 und INT1
 
 
 Kommunikation:
 RS485: UART (2 Pins), DriverEN (1)
 I2C: SDA/SCL für Drucksensor/Temperaturfühler
+DS18B20-Anschluss für Sensoren
 
 
 Anzeige: SPI Periph. MOSI, SCK, SS
-OC2 für OE ShiftReg (Dimmer)
+OC1A für OE ShiftReg (Dimmer)
+
+
+Eingänge für MODBUS-Adresse: 
+SPI Periph. MISO, SCK, SS
