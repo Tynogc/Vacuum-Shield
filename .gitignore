@@ -24,4 +24,7 @@ _autosave-*
 # Exported BOM files
 *.xml
 *.csv
-Drucksensor-backups/*
+
+# Backup and manufacturing exports
+*-backups
+gerber
