@@ -1,0 +1,47 @@
+Anforderungen für die Version 2 des Vakuumauslesers
+
+Edwardspumpensteuerung weg
+Edwards RJ45 Eingang sauber implementieren
+
+Kommunikation RS485, Protokoll Modbus RTU (gibts fertig)
+Adresseinstellung mit Mäuseklaviren
+MAX485 als Kommunikator nach draußen. 
+David hat Netzteile mit 230V nach 24V und 5V
+
+Anzeigen: drei Stellen Wert, zwei Stellen Exponent, vier Quader-LEDs für +/-
+74HC595 je Display, Reihenwiderstände 1206
+Dimming: OE-Pin der Schieberegister an OC2 legen.
+
+Taster. 
+
+
+Featuritis:
+
+PlusMinus vor die Hauptanzeige (Relativdruckanzeige!)
+-> Braucht einen Drucksensor für den Anzeiger (Kosten?)
+
+DS18B20 Anschluss
+
+
+
+IO-Nutzungstabelle
+
+ADCs: 
+2x Messung
+2x ID-Bestimmung
+
+
+GPIOs: 
+4x für zwei Messröhren (Mag EN, Pirani Messbereichsumschaltung)
+2x Relais für Alarm (Out1), Wechsler, Photomos für Out2, LED je Out
+1x zwei LEDs Druckvariante Abs/Rel
+Eingänge: Taster. 
+
+
+Kommunikation:
+RS485: UART (2 Pins), DriverEN (1)
+I2C: SDA/SCL für Drucksensor/Temperaturfühler
+
+
+Anzeige: SPI Periph. MOSI, SCK, SS
+OC2 für OE ShiftReg (Dimmer)
