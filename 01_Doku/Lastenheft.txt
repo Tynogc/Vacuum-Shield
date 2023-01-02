@@ -25,7 +25,7 @@ David hat Netzteile mit 230V nach 24V und 5V
 
 Anzeigen: drei Stellen Wert, zwei Stellen Exponent, vier Quader-LEDs für +/-
 74HC595 je Display, Reihenwiderstände 1206
-Dimming: OE-Pin der Schieberegister an OC2 legen. ### Kollision mit SPI-Port MOSI -> OC1A evtl. auch mnöglich??
+Dimming: OE-Pin der Schieberegister an OC1A legen.
 
 2x Taster (Input ändern / Umschalten Druckanzeige abs / rel)
 
