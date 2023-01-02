@@ -6,15 +6,16 @@ Edwards RJ45 Eingang sauber implementieren
 Kommunikation RS485, Protokoll Modbus RTU (gibts fertig, Spezifikation offen)
 Adresseinstellung mit 8 Bit Mäuseklaviren
 MAX485 als Kommunikator nach draußen. -> 2x RJ45 Buchsen mit RS485, 5V, 24V, GND, 2x Reserve
+Hinweis: evtl. RJ11 oder RJ12 Buchsen für Bus verwenden, damit diese sicher verwechslungssicher gegenüber den Röhren sind. 
 -> Steckerbelegung: 
-1. Reserve 1
-2. Reserve 2
+1. 24V
+2. GND
 3. 5V
 4. B
 5. A
 6. GND
-7. 24V
-8. GND
+7. Reserve 1
+8. Reserve 2
 
 Spannungen müssen über Lötbrücke zugeschaltet werden, normal aus, dennoch sind so kleine Bus powered Geräte (Gateway, Isolatoren) möglich!
 Mit einem ISDN-Kabel lassen sich BUS und 5V übertragen, daher werden dazu die inneren vier Kontakte genutzt. 
