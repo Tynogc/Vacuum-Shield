@@ -80,22 +80,10 @@
         "window": {
           "display": 1,
           "maximized": true,
-          "pos_x": 730,
-          "pos_y": 294,
-          "size_x": 2380,
-          "size_y": 1572
-        }
-      },
-      {
-        "name": "Drucksensor.kicad_pcb",
-        "open": false,
-        "window": {
-          "display": 1,
-          "maximized": true,
-          "pos_x": 1406,
-          "pos_y": 702,
-          "size_x": 1028,
-          "size_y": 756
+          "pos_x": 1097,
+          "pos_y": 2318,
+          "size_x": 2356,
+          "size_y": 1560
         }
       }
     ]

@@ -10,10 +10,10 @@ Hinweis: evtl. RJ11 oder RJ12 Buchsen für Bus verwenden, damit diese sicher ver
 -> Steckerbelegung: 
 1. 24V
 2. GND
-3. 5V
+3. NC
 4. B
 5. A
-6. GND
+6. 5V
 7. Reserve 1
 8. Reserve 2
 
