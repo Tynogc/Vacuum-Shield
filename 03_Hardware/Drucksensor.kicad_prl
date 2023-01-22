@@ -73,19 +73,6 @@
     "version": 3
   },
   "project": {
-    "files": [
-      {
-        "name": "Drucksensor.kicad_sch",
-        "open": false,
-        "window": {
-          "display": 1,
-          "maximized": true,
-          "pos_x": 1097,
-          "pos_y": 2318,
-          "size_x": 2356,
-          "size_y": 1560
-        }
-      }
-    ]
+    "files": []
   }
 }

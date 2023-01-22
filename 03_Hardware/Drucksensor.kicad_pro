@@ -513,6 +513,14 @@
     [
       "e866e4e7-fc02-45db-8eda-86cbe5657b80",
       "7-Segment"
+    ],
+    [
+      "ac8726d4-9930-48c3-850a-c44932832f8c",
+      "5V-Versorgung"
+    ],
+    [
+      "a2fa1140-e446-46e0-a175-7e447aba49cc",
+      "Schaltausgänge"
     ]
   ],
   "text_variables": {}

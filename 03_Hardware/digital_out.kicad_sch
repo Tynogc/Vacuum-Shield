@@ -1,0 +1,36 @@
+(kicad_sch (version 20220914) (generator eeschema)
+
+  (uuid 7d37516b-3b76-48e0-9f47-435c4576de23)
+
+  (paper "A4")
+
+  (title_block
+    (title "Schaltausgänge für Schaltschwelle und Alarmausgänge")
+    (date "2023-01-22")
+    (rev "0.1")
+    (company "Institut für theoretischen Igorismus")
+    (comment 1 "Philipp Hörauf")
+    (comment 2 "Sven Schneider")
+  )
+
+  (lib_symbols
+  )
+
+
+  (hierarchical_label "R1_Alarm" (shape input) (at 50.8 68.58 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 08940ea7-e9fe-47ba-b17d-c50e109b6680)
+  )
+  (hierarchical_label "R2_Schwelle" (shape input) (at 50.8 78.74 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 65b67417-0a7b-4d60-a18d-c8180a71e8e3)
+  )
+  (hierarchical_label "R1_Schwelle" (shape input) (at 50.8 71.12 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 93127bb3-fe84-4a8a-a4db-fde3390dab02)
+  )
+  (hierarchical_label "R2_Alarm" (shape input) (at 50.8 76.2 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid aa04beea-dca3-4cf1-b91f-595b2c4efedf)
+  )
+)
