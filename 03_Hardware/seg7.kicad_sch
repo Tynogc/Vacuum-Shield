@@ -775,7 +775,7 @@
   )
 
   (no_connect (at 190.5 129.54) (uuid c82c7b48-8721-4af5-9a06-e215c0538900))
-  (no_connect (at 180.34 129.54) (uuid c82c7b48-8721-4af5-9a06-e215c0538900))
+  (no_connect (at 180.34 129.54) (uuid c82c7b48-8721-4af5-9a06-e215c0538901))
 
   (wire (pts (xy 177.8 143.51) (xy 165.1 143.51))
     (stroke (width 0) (type default))
