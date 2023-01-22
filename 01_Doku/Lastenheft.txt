@@ -42,6 +42,7 @@ IO-Nutzungstabelle:
 ADCs: 
 2x Messung
 2x ID-Bestimmung
+2x Betriebsspannungsmessung 24V und 5V
 
 
 GPIOs: 
