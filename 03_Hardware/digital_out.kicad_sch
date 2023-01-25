@@ -17,6 +17,12 @@
   )
 
 
+  (text "Klemmen: \n\nRelais: Steckbare Schraubklemme x3\nPhotomos: Steckbare Schraubklemmen x2"
+    (at 129.54 106.68 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 6186ed3d-bb8a-4800-91bc-db8f6560a305)
+  )
+
   (hierarchical_label "R1_Alarm" (shape input) (at 50.8 68.58 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 08940ea7-e9fe-47ba-b17d-c50e109b6680)
