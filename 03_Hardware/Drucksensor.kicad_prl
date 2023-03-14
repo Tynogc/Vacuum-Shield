@@ -86,6 +86,18 @@
           "size_x": 1016,
           "size_y": 461
         }
+      },
+      {
+        "name": "Drucksensor.kicad_sch",
+        "open": false,
+        "window": {
+          "display": 1,
+          "maximized": true,
+          "pos_x": 966,
+          "pos_y": 2917,
+          "size_x": 2356,
+          "size_y": 1597
+        }
       }
     ]
   }
