@@ -1,6 +1,6 @@
 {
   "board": {
-    "active_layer": 37,
+    "active_layer": 31,
     "active_layer_preset": "",
     "auto_track_width": true,
     "hidden_netclasses": [],
@@ -16,17 +16,17 @@
     },
     "ratsnest_display_mode": 0,
     "selection_filter": {
-      "dimensions": true,
+      "dimensions": false,
       "footprints": true,
-      "graphics": true,
-      "keepouts": true,
+      "graphics": false,
+      "keepouts": false,
       "lockedItems": true,
-      "otherItems": true,
-      "pads": true,
+      "otherItems": false,
+      "pads": false,
       "text": true,
       "tracks": true,
       "vias": true,
-      "zones": true
+      "zones": false
     },
     "visible_items": [
       0,
@@ -45,7 +45,6 @@
       14,
       15,
       16,
-      17,
       18,
       19,
       20,
@@ -76,27 +75,27 @@
   "project": {
     "files": [
       {
-        "name": "Drucksensor.kicad_pcb",
+        "name": "Drucksensor.kicad_sch",
         "open": false,
         "window": {
           "display": 0,
           "maximized": true,
-          "pos_x": -6,
-          "pos_y": 2160,
-          "size_x": 1016,
-          "size_y": 395
+          "pos_x": 881,
+          "pos_y": 1184,
+          "size_x": 2152,
+          "size_y": 1569
         }
       },
       {
-        "name": "Drucksensor.kicad_sch",
+        "name": "Drucksensor.kicad_pcb",
         "open": false,
         "window": {
-          "display": 2,
+          "display": 1,
           "maximized": true,
-          "pos_x": 535,
-          "pos_y": 0,
-          "size_x": 2224,
-          "size_y": 1605
+          "pos_x": 1280,
+          "pos_y": 2949,
+          "size_x": 1280,
+          "size_y": 522
         }
       }
     ]
