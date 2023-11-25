@@ -20,7 +20,7 @@
       "footprints": true,
       "graphics": false,
       "keepouts": false,
-      "lockedItems": true,
+      "lockedItems": false,
       "otherItems": false,
       "pads": false,
       "text": true,
@@ -78,10 +78,10 @@
         "name": "Drucksensor.kicad_sch",
         "open": false,
         "window": {
-          "display": 0,
+          "display": 1,
           "maximized": true,
-          "pos_x": 881,
-          "pos_y": 1184,
+          "pos_x": 880,
+          "pos_y": 0,
           "size_x": 2152,
           "size_y": 1569
         }
@@ -90,12 +90,12 @@
         "name": "Drucksensor.kicad_pcb",
         "open": false,
         "window": {
-          "display": 1,
+          "display": 0,
           "maximized": true,
-          "pos_x": 1280,
-          "pos_y": 2949,
-          "size_x": 1280,
-          "size_y": 522
+          "pos_x": 1009,
+          "pos_y": 2772,
+          "size_x": 1268,
+          "size_y": 516
         }
       }
     ]
