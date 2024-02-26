@@ -1,6 +1,6 @@
 {
   "board": {
-    "active_layer": 0,
+    "active_layer": 36,
     "active_layer_preset": "",
     "auto_track_width": true,
     "hidden_netclasses": [],
@@ -78,12 +78,12 @@
         "name": "Drucksensor.kicad_sch",
         "open": false,
         "window": {
-          "display": 1,
+          "display": 0,
           "maximized": true,
-          "pos_x": 880,
-          "pos_y": 0,
-          "size_x": 2152,
-          "size_y": 1569
+          "pos_x": 864,
+          "pos_y": 952,
+          "size_x": 2128,
+          "size_y": 1594
         }
       },
       {
@@ -92,10 +92,10 @@
         "window": {
           "display": 0,
           "maximized": true,
-          "pos_x": 1009,
-          "pos_y": 2772,
-          "size_x": 1268,
-          "size_y": 516
+          "pos_x": 1332,
+          "pos_y": 830,
+          "size_x": 1244,
+          "size_y": 541
         }
       }
     ]

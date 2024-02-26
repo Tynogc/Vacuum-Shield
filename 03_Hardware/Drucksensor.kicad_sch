@@ -4721,6 +4721,31 @@
     )
   )
 
+  (symbol (lib_id "power:GND") (at 149.86 134.62 270) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 13f36287-db59-4f9c-aaae-1e3047334787)
+    (property "Reference" "#PWR0155" (at 143.51 134.62 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 144.78 134.62 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 149.86 134.62 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 149.86 134.62 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 63aff823-31c4-4056-a5c4-edea9027fd6c))
+    (instances
+      (project "Drucksensor"
+        (path "/d772951a-27ae-4d3f-b561-d53c012cef6f"
+          (reference "#PWR0155") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "Diode:SM6T30A") (at 312.42 78.74 180) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 14edb347-7fe3-4823-9e96-de99ea06aa7f)
@@ -5557,6 +5582,31 @@
       (project "Drucksensor"
         (path "/d772951a-27ae-4d3f-b561-d53c012cef6f"
           (reference "Y101") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 149.86 137.16 270) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid 3f3d1f54-20ba-434a-8b76-f60640bf1823)
+    (property "Reference" "#PWR0154" (at 143.51 137.16 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 144.78 137.16 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 149.86 137.16 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 149.86 137.16 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid cfa766dc-5049-4621-a7f3-7f9a5f7b173e))
+    (instances
+      (project "Drucksensor"
+        (path "/d772951a-27ae-4d3f-b561-d53c012cef6f"
+          (reference "#PWR0154") (unit 1)
         )
       )
     )

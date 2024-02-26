@@ -21,6 +21,80 @@
 
 volatile uint16_t adcWerte[6][8]; // Speicherstelle für alle Daten vom ADC, 8 pro Quelle damit man sauber Gleitmittelwert rechnen kann
 
+uint8_t lutZeichenGross[] = {
+  0b11111010, // 0
+  0b00110000, // 1
+  0b11011001, // 2
+  0b01111001, // 3
+  0b00110011, // 4
+  0b01101011, // 5
+  0b11101011, // 6
+  0b00111000, // 7
+  0b11111011, // 8
+  0b01111011, // 9
+  0b10111011, // A
+  0b11100011, // b
+  0b11001010, // C
+  0b11110001, // d
+  0b11001011, // E
+  0b10001011, // F
+};
+
+uint8_t lutZeichenKlein[] = {
+  0b01111101, // 0
+  0b01100000, // 1
+  0b01010111, // 2
+  0b01110110, // 3
+  0b01101010, // 4
+  0b00111110, // 5
+  0b00111111, // 6
+  0b01110000, // 7
+  0b01111111, // 8
+  0b01111110, // 9
+  0b01111011, // A
+  0b00101111, // b
+  0b00011101, // C
+  0b01100111, // d
+  0b00011111, // E
+  0b00011011, // F
+};
+
+typedef struct
+{
+  bool signGross;
+  bool signKlein;
+  uint8_t zeichenGross[4];
+  uint8_t zeichenKlein[3];
+  uint8_t dezPunktGross;
+  uint8_t dezPunktKlein;
+  uint16_t helligkeit;
+  uint8_t plusMinus;
+  uint8_t statusLeds;
+} segments_t; 
+
+typedef struct
+{
+  segments_t anzeige;
+  uint8_t outputs;
+  uint8_t inputs;
+} shiftReg_t;
+
+typedef struct 
+{
+  int16_t mantisse;
+  int8_t exponent;
+} miniFloat_t;
+
+// Globale Variablen
+
+segments_t siebenSegments;
+shiftReg_t schieberegisterdaten;
+miniFloat_t vakuumsensor_1;
+miniFloat_t vakuumsensor_2;
+miniFloat_t raumdruck;
+
+
+
 void setup() {
   // put your setup code here, to run once:
   pinMode(IndikatorLED, OUTPUT);
@@ -36,6 +110,11 @@ void setup() {
 
   // Serielle Schnittstelle:
   Serial.begin(9600);
+
+  // Initialisiere Variablen
+  analogWrite(Dimmer, 50);
+
+
 }
 
 void loop() {
@@ -49,7 +128,7 @@ void loop() {
 
 
 
-
+/*
 ISR (ADC_vect, ISR_BLOCK) {
   static uint8_t varNummer = 0;
 
@@ -96,10 +175,9 @@ ISR (ADC_vect, ISR_BLOCK) {
   }
   ADCSRA |= 1<<ADSC; // Start.
 }
+*/
 
-//ISR (USART0_RX_vect, ISR_BLOCK) {
 
-//}
 
 void ssSchieber(bool stat) {
   if (stat) {
@@ -120,4 +198,35 @@ void send74hc (uint8_t *txData, uint8_t *rxData, uint8_t len) {
 
   ssSchieber(1);
   SPI.endTransaction();
+}
+
+int miniFloatToSegments(miniFloat_t *zahl, segments_t *anzeige) {
+  if (abs(zahl->exponent) > 99 ) {
+    return -1;
+  }
+  if (abs(zahl->mantisse) > 999 ) {
+    return -1;
+  }
+
+  // lege Zeichen von Zahl in Anzeige ab. 
+
+
+  return 0; // 0 ist ok
+}
+
+void updateAnzeige (segments_t *anzeige, uint8_t outputs, uint8_t *adr) {
+  analogWrite(Dimmer, anzeige->helligkeit);
+  uint8_t temp[7];
+  uint8_t devAdr[7];
+  
+  temp[0] = anzeige->plusMinus | (anzeige->statusLeds)<<3;
+  temp[1] = anzeige->zeichenKlein[1];
+  temp[2] = anzeige->zeichenKlein[0];
+  temp[3] = anzeige->zeichenGross[2];
+  temp[4] = anzeige->zeichenGross[1];
+  temp[5] = anzeige->zeichenGross[0];
+  temp[6] = outputs;
+
+  send74hc(temp, devAdr, 7);
+  *adr = devAdr[0]; // es wird nur das erste Datenfeld sinnvoll gefüllt, danach kommen Nullen.
 }
